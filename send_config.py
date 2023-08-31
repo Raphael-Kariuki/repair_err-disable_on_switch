@@ -66,14 +66,11 @@ def check_state(hostname, username, password, port):
         # Start an interactive shell session
         ssh_shell = ssh_client.invoke_shell()
 
-'''
+
 #.exec_command threw the error - paramiko.ssh_exception.SSHException: Invalid packet blocking
-
-The "paramiko.ssh_exception.SSHException: Invalid packet blocking" error in Paramiko typically occurs 
-when there is a problem with the SSH connection, specifically related to packet synchronization or timing issues.
-
-Solution provided is to use #.invoke_shell then  #.send and #.receive rather than #.exec_command
-'''
+#The 'paramiko.ssh_exception.SSHException: Invalid packet blocking' error in Paramiko typically occurs 
+#when there is a problem with the SSH connection, specifically related to packet synchronization or timing issues.
+#Solution provided is to use #.invoke_shell then  #.send and #.receive rather than #.exec_command
         stdin, stdout, stderr = ssh_client.exec_command('sh int f3/0/' + str(port) +' status' + "\n")
         string_to_check = 'err-disable'
         string_to_check2 = 'connected'
