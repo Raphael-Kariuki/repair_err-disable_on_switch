@@ -130,3 +130,6 @@ def main():
             send_config(hostname,username,password,config_commands)
 
 
+while True:
+    main()
+    time.sleep(1)
