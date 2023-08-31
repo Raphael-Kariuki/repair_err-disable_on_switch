@@ -36,6 +36,7 @@ def send_config(hostname, username, password, config_commands):
         # Send configuration commands
         for cmd in config_commands:
             print(f"Executing {cmd}" )
+        # the response for a #.send is the number of ( bytes or bits ) sent -> not sure about the unit of measurement. To confirm
             result = ssh_shell.send(cmd + "\n")
             print(f"Result of {cmd} is {result}" )
             time.sleep(1)
