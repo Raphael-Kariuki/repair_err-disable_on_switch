@@ -1,7 +1,7 @@
 # Correct err-disable on cisco switch
 
 ### Requirements
-1. Python - Installation depends on your Environment - Advisable to run on virtual env. Python virtual env tutorial => [How to create virtual env on Windows](https://youtu.be/HkhsvP6a0vk?si=2v6pHm-njx6-05D0)
+1. Python - Installation depends on your Environment - Advisable to run on virtual env. [How to create virtual env on Windows](https://youtu.be/HkhsvP6a0vk?si=2v6pHm-njx6-05D0)
 2. Paramiko - `pip install -r requirements.txt`
 
 
