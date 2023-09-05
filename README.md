@@ -36,12 +36,10 @@ password = ""
 ```
 then specify ports connected to the unifi ap's
 
-Adjust sleep duration!
-
 ```
 ports1 = [4,14,25,31]
 
 ports2 = [8,9]
 
 ```
-Execute the python script which will run in a loop till termination.
+Execute the python script which will run in a loop till termination after adjusting time.sleep duration to suite your needs.
