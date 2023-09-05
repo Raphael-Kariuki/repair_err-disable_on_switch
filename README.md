@@ -30,6 +30,8 @@ password = ""
 ```
 then specify ports connected to the unifi ap's
 
+Adjust sleep duration!
+
 ```
 ports1 = [4,14,25,31]
 
