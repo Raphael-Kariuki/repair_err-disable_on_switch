@@ -56,14 +56,16 @@ def send_config(hostname, username, password, config_commands):
         print("Error:", str(e))
     finally:
         ssh_client.close()
+        # pass
 
 
 
 def check_state(hostname, username, password, port):
     # ssh_client = paramiko.SSHClient()
     # ssh_client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
-    ssh_client.connect(hostname, username=username, password=password)
+    
     try:
+        ssh_client.connect(hostname, username=username, password=password)
         # Start an interactive shell session
         # ssh_shell = ssh_client.invoke_shell()
 
@@ -72,6 +74,7 @@ def check_state(hostname, username, password, port):
 #The 'paramiko.ssh_exception.SSHException: Invalid packet blocking' error in Paramiko typically occurs 
 #when there is a problem with the SSH connection, specifically related to packet synchronization or timing issues.
 #Solution provided is to use #.invoke_shell then  #.send and #.receive rather than #.exec_command
+        
         stdin, stdout, stderr = ssh_client.exec_command('sh int f3/0/' + str(port) +' status' + "\n")
         string_to_check = 'err-disable'
         string_to_check2 = 'connected'
