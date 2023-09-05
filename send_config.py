@@ -65,7 +65,7 @@ def check_state(hostname, username, password, port):
     ssh_client.connect(hostname, username=username, password=password)
     try:
         # Start an interactive shell session
-        ssh_shell = ssh_client.invoke_shell()
+        # ssh_shell = ssh_client.invoke_shell()
 
 
 #.exec_command threw the error - paramiko.ssh_exception.SSHException: Invalid packet blocking
